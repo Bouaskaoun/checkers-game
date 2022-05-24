@@ -10,10 +10,6 @@ class Piece:
         self.column =column
         self.color = color
         self.king = False
-        if self.color == red:
-            self.direction = -1
-        else:
-            self.direction = 1
         self.x = 0
         self.y = 0
         self.calcul_position()
