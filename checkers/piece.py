@@ -1,37 +1,37 @@
+from .constants import RED, WHITE, SQUARE_SIZE, GREY, CROWN
 import pygame
-from .constants import red,grey,square_size,crown
 
 class Piece:
-    padding = 10
-    outline = 2
+    PADDING = 15
+    OUTLINE = 2
 
-    def __init__(self,row,column,color):
+    def __init__(self, row, col, color):
         self.row = row
-        self.column =column
+        self.col = col
         self.color = color
         self.king = False
         self.x = 0
         self.y = 0
-        self.calcul_position()
+        self.calc_pos()
 
-    def calcul_position(self):
-        self.x = square_size * self.column + square_size // 2
-        self.y = square_size * self.row + square_size // 2
+    def calc_pos(self):
+        self.x = SQUARE_SIZE * self.col + SQUARE_SIZE // 2
+        self.y = SQUARE_SIZE * self.row + SQUARE_SIZE // 2
 
     def make_king(self):
         self.king = True
-
-    def draw(self,win):
-        redius = square_size // 2 - self.padding
-        pygame.draw.circle(win,grey,(self.x,self.y),redius + self.outline)
-        pygame.draw.circle(win,self.color,(self.x,self.y),redius)
-        if self.king:
-            win.blit(crown,(self.x - crown.get_width()//2,self.y - crown.get_height()//2))
-
-    def move(self,row,col):
-        self.row = row
-        self.column = col
-        self.calcul_position()
     
+    def draw(self, win):
+        radius = SQUARE_SIZE//2 - self.PADDING
+        pygame.draw.circle(win, GREY, (self.x, self.y), radius + self.OUTLINE)
+        pygame.draw.circle(win, self.color, (self.x, self.y), radius)
+        if self.king:
+            win.blit(CROWN, (self.x - CROWN.get_width()//2, self.y - CROWN.get_height()//2))
+
+    def move(self, row, col):
+        self.row = row
+        self.col = col
+        self.calc_pos()
+
     def __repr__(self):
         return str(self.color)
