@@ -5,6 +5,7 @@ from checkers.button import Button
 
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption('Checkers')
+pygame.display.set_icon(pygame.image.load('assets/chinese-checkers-32.png'))
 
 def get_row_col_from_mouse(pos):
     x, y = pos
@@ -12,11 +13,11 @@ def get_row_col_from_mouse(pos):
     col = x // SQUARE_SIZE
     return row, col
 
-buttons = [Button("START", "START", WIDTH / 2 + PADDING - 90, HEIGHT / 2 + PADDING * 2 + 100, BLACK, 0)]
+buttons = [Button("START", "START", WIDTH / 2 + PADDING - 80, HEIGHT / 2 + PADDING * 2 + 150, BLACK, 0)]
 def drawMenu(win):
     win.fill(WHITE)
 
-    text = TITLE_FONT.render("Backgammon", 1, BLACK)
+    text = TITLE_FONT.render("Checkers", 1, BLACK)
     win.blit(text, (round(WIDTH / 2) - round(text.get_width() / 2), 25))
 
     text = BODY_FONT_SMALL.render("v0.1", 1, BLACK)
@@ -25,8 +26,8 @@ def drawMenu(win):
     for b in buttons:
         b.draw(win)
 
-    dices = pygame.image.load("assets/backgammon_ambiance3.png")
-    win.blit(dices,(280,0))
+    dices = pygame.image.load("assets/chinese-checkers-256.png")
+    win.blit(dices,(WIDTH /2 -128,HEIGHT/2 -128))
     pygame.display.update()
 
 def runMenu(window):
