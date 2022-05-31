@@ -6,12 +6,6 @@ WIDTH, HEIGHT = 600, 600
 ROWS, COLS = 8, 8
 SQUARE_SIZE = WIDTH//COLS
 
-RED = (255, 0, 0)
-WHITE = (255, 255, 255)
-BLACK = (0, 0, 0)
-BLUE = (0, 0, 255)
-GREY = (128,128,128)
-
 CROWN = pygame.transform.scale(pygame.image.load('assets/crown.png'), (44, 25))
 
 # fonts
@@ -34,6 +28,8 @@ WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 RED = (255, 0, 0)  
 BROWN = (102, 61, 20)
+BLUE = (0, 0, 255)
+GREY = (128,128,128)
 
 
 # UI
@@ -58,17 +54,4 @@ BUTTON_FONT_COLORS = [WHITE,
                       BLACK,
                       BLACK,
                       WHITE]
-INPUT_BOX_COLOR_INACTIVE = PURPLE
-INPUT_BOX_COLOR_ACTIVE = PURPLE
-INPUT_BOX_FONT = BODY_FONT_SMALL
-BOARD_X = [50, 110, 170, 230, 290, 350, 448, 508, 568, 628, 688, 748]
-BOARD_BAR_X = round((BOARD_X[5] + BOARD_X[6]) / 2)
-# note that the real board starts at index 1
-TA_BOX_DISPLAY_SIZE = 3
-STUDENT_BOX_DISPLAY_SIZE = 5
 
-
-# MISC
-# -----------------------------------------------------------------
-PLAYER_COLOR = [WHITE, RED]
-PLAYER_COLOR_STR = ["White", "Red"]
