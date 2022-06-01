@@ -13,7 +13,6 @@ def main():
     screen = menu.runMenu(WIN)
     run = True
     clock = pygame.time.Clock()
-    game = Game(WIN)
 
     while run:
         clock.tick(60)
@@ -25,7 +24,9 @@ def main():
             if screen == 'Menu':
                 screen = menu.runMenu(WIN)
             elif screen == 'INGAME':
-                ingame.runInGame(WIN)
+                screen = ingame.runInGame(WIN)
+            elif screen == 'QUIT':
+                run = False
             
 
 main()

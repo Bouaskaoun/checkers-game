@@ -18,11 +18,11 @@ def runInGame(win):
 
         if game.winner() != None:
             print(game.winner())
-            run = False
+            return 'QUIT'
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                run = False
+                return 'QUIT'
             
             if event.type == pygame.MOUSEBUTTONDOWN:
                 pos = pygame.mouse.get_pos()

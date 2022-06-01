@@ -21,7 +21,6 @@ def drawMenu(win):
     pygame.display.update()
 
 def runMenu(window):
-    display_screen = "MENU"
     clock = pygame.time.Clock()
     run = True
     while run:
@@ -29,11 +28,11 @@ def runMenu(window):
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                run = False
+                return 'QUIT'
             if event.type == pygame.MOUSEBUTTONDOWN:
                 pos = pygame.mouse.get_pos()
                 for b in buttons:
                     if b.click(pos):
-                        if b.button_id == "START":
-                            return "INGAME"
+                        if b.button_id == 'START':
+                            return 'INGAME'
         drawMenu(window)
