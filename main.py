@@ -9,7 +9,7 @@ pygame.display.set_icon(pygame.image.load('assets/chinese-checkers-32.png'))
 
 
 def main():
-    screen = endgame.run(WIN)
+    screen = menu.run(WIN)
     run = True
     clock = pygame.time.Clock()
 
