@@ -1,5 +1,5 @@
 import pygame
-from checkers.constants import BUTTON_DIMENSIONS, BUTTON_DEFAULT_FONT, BUTTON_FONT_COLORS, PADDING
+from checkers.constants import BUTTON_DIMENSIONS, BUTTON_DEFAULT_FONT, BUTTON_FONT_COLORS, PADDING, GAME_OVER_FONT_SMALL, RED
 
 class Button:
     def __init__(self, button_id, text, x, y, color, type):
@@ -22,6 +22,15 @@ class Button:
                             self.y + round(self.height / 2) - round(text.get_height() / 2)))
         else:
             win.blit(text, (self.x + PADDING, self.y + round(self.height / 2) - round(text.get_height() / 2)))
+
+    def drawEnd(self, win):
+        text = GAME_OVER_FONT_SMALL.render(self.text, 1, RED)
+        if self.centered_text:
+            win.blit(text, (self.x - round(text.get_width() / 2),
+                            self.y - round(text.get_height() / 2)))
+        else:
+            win.blit(text, (self.x - round(text.get_width() / 2),
+                            self.y - round(text.get_height() / 2)))
 
     def click(self, pos):
         x1 = pos[0]

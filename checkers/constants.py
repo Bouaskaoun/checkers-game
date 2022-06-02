@@ -16,7 +16,8 @@ BODY_FONT = pygame.font.Font("assets/fonts/OpenSans_regular.ttf", 24)
 BODY_FONT_SMALL = pygame.font.Font("assets/fonts/OpenSans_regular.ttf", 16)
 BODY_FONT_EXTRA_SMALL = pygame.font.Font("assets/fonts/OpenSans_regular.ttf", 12)
 BODY_FONT_BOLD = pygame.font.Font("assets/fonts/OpenSans_bold.ttf", 24)
-
+GAME_OVER_FONT_BIG = pygame.font.Font("assets/fonts/game_over.ttf", 200)
+GAME_OVER_FONT_SMALL = pygame.font.Font("assets/fonts/game_over.ttf", 30)
 
 # colors
 # -----------------------------------------------------------------
@@ -43,7 +44,7 @@ BUTTON_DIMENSIONS = [[150, 50],
                      [100, 33],
                      [round(WIDTH_INSIDE_MARGIN / 2) - PADDING * 2, 40],
                      [100, 33],
-                     [80, 28]]
+                     [10, 10]]
 BUTTON_DEFAULT_FONT = [BODY_FONT_BOLD,
                        BODY_FONT_SMALL,
                        BODY_FONT_SMALL,

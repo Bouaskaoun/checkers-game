@@ -1,7 +1,6 @@
 import pygame
 from checkers.constants import WIDTH, HEIGHT
-from checkers.game import Game
-from checkers.screens import menu, ingame
+from checkers.screens import menu, ingame, endgame
 
 
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -10,7 +9,7 @@ pygame.display.set_icon(pygame.image.load('assets/chinese-checkers-32.png'))
 
 
 def main():
-    screen = menu.runMenu(WIN)
+    screen = endgame.run(WIN)
     run = True
     clock = pygame.time.Clock()
 
@@ -22,9 +21,11 @@ def main():
                 run = False
             
             if screen == 'Menu':
-                screen = menu.runMenu(WIN)
+                screen = menu.run(WIN)
             elif screen == 'INGAME':
-                screen = ingame.runInGame(WIN)
+                screen = ingame.run(WIN)
+            elif screen == 'RESTART':
+                screen = endgame.run(WIN)
             elif screen == 'QUIT':
                 run = False
             

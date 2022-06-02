@@ -8,7 +8,7 @@ def get_row_col_from_mouse(pos):
     col = x // SQUARE_SIZE
     return row, col
 
-def runInGame(win):
+def run(win):
     run = True
     clock = pygame.time.Clock()
     game = Game(win)
@@ -18,7 +18,7 @@ def runInGame(win):
 
         if game.winner() != None:
             print(game.winner())
-            return 'QUIT'
+            return 'RESTART'
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:

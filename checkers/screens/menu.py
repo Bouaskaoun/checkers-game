@@ -4,7 +4,7 @@ from checkers.constants import WIDTH, HEIGHT, WHITE, BLACK, TITLE_FONT, BODY_FON
 
 
 buttons = [Button("START", "START", WIDTH / 2 + PADDING - 80, HEIGHT / 2 + PADDING * 2 + 150, BLACK, 0)]
-def drawMenu(win):
+def draw(win):
     win.fill(WHITE)
 
     text = TITLE_FONT.render("Checkers", 1, BLACK)
@@ -20,7 +20,7 @@ def drawMenu(win):
     win.blit(dices,(WIDTH /2 -128,HEIGHT/2 -128))
     pygame.display.update()
 
-def runMenu(window):
+def run(window):
     clock = pygame.time.Clock()
     run = True
     while run:
@@ -35,4 +35,4 @@ def runMenu(window):
                     if b.click(pos):
                         if b.button_id == 'START':
                             return 'INGAME'
-        drawMenu(window)
+        draw(window)
