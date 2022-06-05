@@ -24,18 +24,11 @@ def run(win):
             value, new_board = minimax(game.get_board(), 4, False, game)
             game.ai_move(new_board)
 
-        if game.winner() != None:
-            print(game.winner())
-            return 'RESTART'
-
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return 'QUIT'
-            
-            if event.type == pygame.MOUSEBUTTONDOWN:
-                pos = pygame.mouse.get_pos()
-                row, col = get_row_col_from_mouse(pos)
-                game.select(row, col)
 
-        game.update()
+        game.updateIA()
+        if game.updateIA() == 'RESTART':
+            return 'RESTART'
 

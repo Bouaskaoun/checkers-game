@@ -12,6 +12,14 @@ class Game:
         self.draw_valid_moves(self.valid_moves)
         pygame.display.update()
 
+    def updateIA(self):
+        if (self.board != None):
+            self.board.draw(self.win)
+            self.draw_valid_moves(self.valid_moves)
+            pygame.display.update()
+        else:
+            return 'RESTART'
+
     def _init(self):
         self.selected = None
         self.board = Board()
