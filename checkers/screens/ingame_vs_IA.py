@@ -1,6 +1,7 @@
 import pygame
-from checkers.constants import SQUARE_SIZE
+from checkers.constants import SQUARE_SIZE, WHITE
 from checkers.game import Game
+from minimax.algorithm import minimax
 
 def get_row_col_from_mouse(pos):
     x, y = pos
@@ -15,6 +16,11 @@ def run(win):
 
     while run:
         clock.tick(60)
+
+        if game.turn == WHITE:
+            value, new_board = minimax(game.get_board(), 4, WHITE, game)
+            game.ai_move(new_board)
+        
 
         if game.winner() != None:
             print(game.winner())

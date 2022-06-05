@@ -3,7 +3,9 @@ from checkers.button import Button
 from checkers.constants import WIDTH, HEIGHT, WHITE, BLACK, TITLE_FONT, BODY_FONT_SMALL, PADDING
 
 
-buttons = [Button("START", "START", WIDTH / 2 + PADDING - 80, HEIGHT / 2 + PADDING * 2 + 150, BLACK, 0)]
+buttons = [Button("START(1 vs 1)", "START(1 vs 1)", WIDTH / 2 + PADDING - 80, HEIGHT / 2 + PADDING * 2 + 100, BLACK, 1),
+           Button("START(1 vs IA)", "START(1 vs IA)", WIDTH / 2 + PADDING - 80, HEIGHT / 2 + PADDING * 2 + 150, BLACK, 1),
+           Button("START(IA vs IA)", "START(IA vs IA)", WIDTH / 2 + PADDING - 80, HEIGHT / 2 + PADDING * 2 + 200, BLACK, 1)]
 def draw(win):
     win.fill(WHITE)
 
@@ -33,6 +35,10 @@ def run(window):
                 pos = pygame.mouse.get_pos()
                 for b in buttons:
                     if b.click(pos):
-                        if b.button_id == 'START':
-                            return 'INGAME'
+                        if b.button_id == 'START(1 vs 1)':
+                            return 'INGAME(1 vs 1)'
+                        elif b.button_id == 'START(1 vs IA)':
+                            return 'INGAME(1 vs IA)'
+                        elif b.button_id == 'START(IA vs IA)':
+                            return 'INGAME(IA vs IA)'
         draw(window)

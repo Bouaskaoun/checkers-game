@@ -41,7 +41,7 @@ WIDTH_INSIDE_MARGIN = WIDTH - BIG_MARGIN * 3
 MIDDLE_X = round(WIDTH / 2)
 # 0 is standard button, 1 is smaller. 2 is menu_item button. Each is in [width, height]
 BUTTON_DIMENSIONS = [[150, 50],
-                     [100, 33],
+                     [200, 33],
                      [round(WIDTH_INSIDE_MARGIN / 2) - PADDING * 2, 40],
                      [100, 33],
                      [10, 10]]
