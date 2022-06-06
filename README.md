@@ -32,9 +32,6 @@ CHECKERS-GAME/
 
 - <https://github.com/Bouaskaoun>
 
-## Copyright and license
-
-Code and documentation copyright 2022-2023 the authors. Code released under the [MIT License](https://github.com/Bouaskaoun).
 
 Enjoy :metal:
 
