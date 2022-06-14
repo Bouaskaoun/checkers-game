@@ -1,3 +1,5 @@
+# Checkers Game
+
 <p align="center">
   <a href="https://github.com/Bouaskaoun">
     <img src="assets/chinese-checkers-256.png" alt="Logo" width=72 height=72>
@@ -11,27 +13,16 @@
   </p>
 </p>
 
+- Please feel free to contact me and check out more projects of mine: [Bouaskaoun](https://github.com/Bouaskaoun)
 
-## What's included
+## Context:
 
-Structure
+This game built using the library pygame
 
-```
-CHECKERS-GAME/
-└── assets/
-└── checkers/
-    └── screens
-└── minimax/
-└── main.py
+ 
+## My objectives:
 
-```
-
-## Creators
-
-**Creator **
-
-- <https://github.com/Bouaskaoun>
-
+- implementation of minimax algorithm
 
 Enjoy :metal:
 
