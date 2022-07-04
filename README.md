@@ -16,15 +16,14 @@
 Play by selecting your piece and clicking on the tile you want to move to. Click [here](https://www.wikihow.com/Play-Checkers#Checkers-Rules-and-Gameplay) to learn how to play checkers.
 
 1. Implemented a basic Minimax Agent with limited depth.
-
+<hr>
 <table>
     <tr>
-        <td><img src="assets/welcome__screen.png" alt="welcome"></td>
-    </tr>
-    <tr>
-        <td><img src="assets/board__screen.png" alt="board"></td>
+        <td><img src="assets/welcome__screen.PNG" alt="welcome"></td>
+        <td><img src="assets/board__screen.PNG" alt="board"></td>
     </tr>
 </table>
+<hr>
 
 ## Evaluation Functions
 
